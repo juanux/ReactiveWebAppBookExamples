@@ -8,4 +8,7 @@ lazy val `simple-vocabulary-teacher` = (project in file(".")).enablePlugins(Play
 
 routesGenerator := InjectedRoutesGenerator
 
+routesImport += "binders.PathBinders._"
+
 com.typesafe.sbt.SbtScalariform.scalariformSettings
+
