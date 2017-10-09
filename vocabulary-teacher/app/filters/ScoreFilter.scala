@@ -1,21 +1,21 @@
 package filters
 
 import play.api.libs.iteratee.Enumerator
-import play.api.mvc.{Filter, RequestHeader, Result}
+import play.api.mvc.{ Filter, RequestHeader, Result }
 
 import scala.concurrent.Future
 
-class ScoreFilter extends Filter{
+class ScoreFilter extends Filter {
 
-  override def apply(nextFilter:(RequestHeader) => Future[Result])(rh: RequestHeader): Future[Result] = {
+  override def apply(nextFilter: (RequestHeader) => Future[Result])(rh: RequestHeader): Future[Result] = {
 
     val result = nextFilter(rh)
 
     import play.api.libs.concurrent.Execution.Implicits._
 
-    result.map{res=>
+    result.map { res =>
 
-      if(res.header.status == 200 || res.header.status == 406){
+      if (res.header.status == 200 || res.header.status == 406) {
 
         val correct = res.session(rh).get("correct").getOrElse(0)
         val wrong = res.session(rh).get("wrong").getOrElse(0)
@@ -25,10 +25,9 @@ class ScoreFilter extends Filter{
 
         res.copy(body = newBody)
 
-      }else{
+      } else {
         res
       }
-
 
     }
 
