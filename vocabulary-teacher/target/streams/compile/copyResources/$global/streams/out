@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/juanjosemorales/ReactiveWebAppBookExamples/vocabulary-teacher/conf/logback.xml,/Users/juanjosemorales/ReactiveWebAppBookExamples/vocabulary-teacher/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/juanjosemorales/ReactiveWebAppBookExamples/vocabulary-teacher/conf/application.conf,/Users/juanjosemorales/ReactiveWebAppBookExamples/vocabulary-teacher/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/juanjosemorales/ReactiveWebAppBookExamples/vocabulary-teacher/conf/routes,/Users/juanjosemorales/ReactiveWebAppBookExamples/vocabulary-teacher/target/scala-2.11/classes/routes)[0m
